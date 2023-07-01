@@ -30,6 +30,14 @@ const fun2 = function (num1, num2, num3 = 10) {
 function Greet(greeting, ...names) {
     return greeting + " " + names.join(", ") + "!";
 }
-console.log(Greet("Hello", "Steve", "Bill")); // returns "Hello Steve, Bill!"
-console.log(Greet("Hello")); // returns "Hello !"
-let text;
+//console.log(Greet("Hello", "Steve", "Bill")); // returns "Hello Steve, Bill!"
+//console.log(Greet("Hello")); // returns "Hello !"
+//generics
+function getItems(items) {
+    return new Array().concat(items);
+}
+//Type is implicitly detemined
+let array1 = getItems([4, 5, 2, 5, 2, 8]);
+console.log(array1);
+let array2 = getItems(["Kavindu", "Gihan", "Dharmasiri"]);
+console.log(array2);

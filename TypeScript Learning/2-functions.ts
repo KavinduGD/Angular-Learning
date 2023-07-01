@@ -37,3 +37,13 @@ function Greet(greeting: string, ...names: string[]): string {
 }
 //console.log(Greet("Hello", "Steve", "Bill")); // returns "Hello Steve, Bill!"
 //console.log(Greet("Hello")); // returns "Hello !"
+
+//generics
+function getItems<Type>(items: Type[]): Type[] {
+  return new Array<Type>().concat(items);
+}
+//Type is implicitly detemined
+let array1 = getItems([4, 5, 2, 5, 2, 8]);
+console.log(array1);
+let array2 = getItems<string>(["Kavindu", "Gihan", "Dharmasiri"]);
+console.log(array2);
